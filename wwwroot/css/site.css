@@ -1,0 +1,156 @@
+@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+a, .btn-link {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.content {
+    padding-top: 1.1rem;
+}
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 1px solid red;
+}
+
+.validation-message {
+    color: red;
+}
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+
+.DecrementFind {
+    display: block;
+    width: 80px;
+    height: 50px;
+    position: fixed;
+    right: 0;
+    top: 200px;
+    z-index: 99999;
+    text-align: center;
+    border: double;
+}
+
+.IncrementFind {
+    display: block;
+    width: 80px;
+    height: 50px;
+    position: fixed;
+    right: 0;
+    top: 250px;
+    z-index: 99999;
+    text-align: center;
+    border: double;
+}
+
+.logsBorder {
+    box-shadow: 0 0 5px;
+    border-radius: 25px;
+    padding: 15px;
+    margin: 0 0 15px 0;
+}
+
+.inputBorder {
+    display: block;
+    position: fixed;
+    right: 40px;
+    bottom: 10px;
+    box-shadow: 0 0 5px;
+    border-radius: 25px;
+    padding: 0 15px;
+    margin: 0 0 15px 0;
+    z-index: 99999;
+    outline: none;
+}
+
+.strokeFindBorder {
+    box-shadow: 0 0 5px;
+    border-radius: 15px;
+    padding: 0 5px 0 5px;
+    background-color: Yellow;
+}
+
+.elementFindBorder {
+    box-shadow: 0 0 5px;
+    border-radius: 15px;
+    padding: 0 3px 0 3px;
+    background-color: #ff9632;
+}
+
+.next {
+    display: inline-block;
+    position: fixed;
+    right: 40px;
+    bottom: 60px;
+    box-shadow: 0 0 5px;
+    border-radius: 15px;
+    padding: 0 3px 0 3px;
+    text-decoration: none;
+    color: Black;
+}
+
+.previous {
+    display: inline-block;
+    position: fixed;
+    right: 80px;
+    bottom: 60px;
+    box-shadow: 0 0 5px;
+    border-radius: 15px;
+    padding: 0 6px 0 3px;
+    text-decoration: none;
+    color: Black;
+}
+
+.enter {
+    display: inline-block;
+    position: fixed;
+    right: 125px;
+    bottom: 60px;
+    box-shadow: 0 0 5px;
+    border-radius: 15px;
+    padding: 0 6px 0 3px;
+    text-decoration: none;
+    color: Black;
+}
+
+.CurrentFind {
+    box-shadow: 0 0 5px;
+    border-radius: 15px;
+    padding: 0 3px 0 3px;
+    background-color: #FF00FF;
+}
+
+button:active,
+button:focus {
+    outline: none;
+}
