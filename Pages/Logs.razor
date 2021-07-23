@@ -1,0 +1,69 @@
+﻿@page "/"
+@inherits GetText
+
+<input class="inputBorder" @bind="@str"  placeholder="Search">
+<div class="logsBorder">
+    @{
+        i = 0;
+        foreach (string stroke in text)
+        {
+            if (str == null)
+            {
+                <div>@stroke  </div>
+            }
+            else
+            {
+                if (stroke?.IndexOf(str, 0) >= 0)
+                {
+                    string ColorStroke = ColorFind(stroke, str);
+                    if (index == i)
+                    {
+                        ColorStroke = ColorCurrentFind(ColorStroke, str);
+                    }
+                    <span class="strokeFindBorder" id="@i"> @((MarkupString)ColorStroke) </span>
+                    <br>
+                    i++;
+
+                }
+                else
+                {
+                    <div> @stroke </div>
+                }   
+            }
+        }
+    }
+</div>
+    <p> @(indexView)/@i</p>
+    <button class="next" @onclick="IncIndex"> +1 </button>
+    <button class="previous" @onclick="DecIndex"> -1 </button>
+    <button class="enter " onclick="top.location.href = '#@index'">К элементу №@indexView</button>
+
+
+
+@code
+    {
+    
+    public string ColorFind(string stroke, string word)
+    {
+        string ColorStroke = stroke.Replace(word, "<span class = \"elementFindBorder\">" + word + "</span>");
+        return ColorStroke;
+    }
+    public string ColorCurrentFind(string stroke, string word)
+    {
+        string ColorStrokeCurrentFind = stroke.Replace(word, "<span class = \"CurrentFind\">" + word + "</span>");
+        return ColorStrokeCurrentFind;
+    }
+
+    private void IncIndex()
+    {
+        index++;
+        indexView++;
+        if (index >= i) { index = i - 1; indexView = i; }
+    }
+    private void DecIndex()
+    {
+        index--;
+        indexView--;
+        if (index < 0) { index = 0; indexView = 1; }
+    }
+}
