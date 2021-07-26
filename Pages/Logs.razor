@@ -13,12 +13,13 @@
             }
             else
             {
-                if (stroke?.IndexOf(str, 0) >= 0)
+                if (stroke.IndexOf(str, 0) >= 0)
                 {
                     string ColorStroke = ColorFind(stroke, str);
                     if (index == i)
                     {
                         ColorStroke = ColorCurrentFind(ColorStroke, str);
+                        if (indexView == 0) indexView++;
                     }
                     <span class="strokeFindBorder" id="@i"> @((MarkupString)ColorStroke) </span>
                     <br>
@@ -33,16 +34,16 @@
         }
     }
 </div>
-    <p> @(indexView)/@i</p>
+    <p class="counter"> @(indexView)/@i </p>
     <button class="next" @onclick="IncIndex"> +1 </button>
     <button class="previous" @onclick="DecIndex"> -1 </button>
-    <button class="enter " onclick="top.location.href = '#@index'">К элементу №@indexView</button>
+    <button class="enter " onclick="top.location.href = '#@index'">К элементу №@indexView </button>
 
 
 
 @code
     {
-    
+
     public string ColorFind(string stroke, string word)
     {
         string ColorStroke = stroke.Replace(word, "<span class = \"elementFindBorder\">" + word + "</span>");
@@ -64,6 +65,6 @@
     {
         index--;
         indexView--;
-        if (index < 0) { index = 0; indexView = 1; }
+        if (index < 1) { index = 0; indexView = 1; }
     }
 }

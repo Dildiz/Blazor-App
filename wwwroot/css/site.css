@@ -145,9 +145,19 @@ a, .btn-link {
 
 .CurrentFind {
     box-shadow: 0 0 5px;
-    border-radius: 15px;
+    border-radius: 25px;
     padding: 0 3px 0 3px;
     background-color: #FF00FF;
+}
+
+.counter {
+    display: inline-block;
+    position: fixed;
+    right: 40px;
+    bottom: 80px;
+    box-shadow: 0 0 5px black;
+    border-radius: 25px;
+    padding: 3px;
 }
 
 button:active,

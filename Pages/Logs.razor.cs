@@ -15,7 +15,7 @@ namespace BlazorEx.Pages
     {
         public int i = 0;
         public int index = 0;
-        public int indexView = 1;
+        public int indexView = 0;
         public string str { get; set; }
         static string path = @".\wwwroot\Канал_03.CE 303";
         public string[] text = File.ReadAllLines(path, CodePagesEncodingProvider.Instance.GetEncoding(1251));
